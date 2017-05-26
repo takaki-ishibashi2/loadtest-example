@@ -37,5 +37,5 @@ loadtest.loadTest(opts, (error, result) => {
 
 ### Run a load test
 ```
-node test/load/load-template.js
+node test/load/load-peak.js
 ```
