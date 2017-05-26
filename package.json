@@ -1,0 +1,11 @@
+{
+  "name": "loadtest-sample",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:takaki-ishibashi2/loadtest-sample.git",
+  "author": "takaki.ishibashi2 <taka@reaktor.co.jp>",
+  "license": "MIT",
+  "devDependencies": {
+    "loadtest": "^2.3.0"
+  }
+}
