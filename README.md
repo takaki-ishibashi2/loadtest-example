@@ -7,14 +7,9 @@
 yarn add --dev loadtest
 ```
 
-### Create test file
+### Edit a test file
 ```
-touch test/laod/load-peak.js
-```
-
-### Edit line of TODO
-```
-// load-peak.js
+// vi test/load/load-sample.js
 
 "use strict";
 const loadtest = require("loadtest");
@@ -35,7 +30,7 @@ loadtest.loadTest(opts, (error, result) => {
 });
 ```
 
-### Run a load test
+### Run a test
 ```
-node test/load/load-peak.js
+node test/load/load-sample.js
 ```
