@@ -7,11 +7,12 @@
 yarn add --dev loadtest
 ```
 
-### Edit a test file
+### Create a test file
 ```
 // vi test/load/load-sample.js
 
-...
+"use strict";
+const loadtest = require("loadtest");
 const opts = {
     concurrency: 1,
     insecure: true,
@@ -19,13 +20,35 @@ const opts = {
     maxRequests: 10,
     requestPerSecond: 2,
     timeout: 3000,
-    url: 'http://localhost:3000' // TODO
+    url: '<url>' // e.g. http://localhost:3000
 };
 
-...
+loadtest.loadTest(opts, (error, result) => {
+    if (error)
+        return console.error('Got an error: %s', error);
+    console.log('Tests run sucessfull:', result);
+});
 ```
 
 ### Run a test
 ```
 node test/load/load-sample.js
 ```
+
+### Next
+Add test cases of several situation:
+```
+// Average
+- Test time = long
+- Requests per second = low
+
+// Release
+- TT = long
+- RPS = low -> high
+
+// Peak
+- TT = short
+- RPS = high
+```
+
+Use CloudWatch
