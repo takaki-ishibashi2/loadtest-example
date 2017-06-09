@@ -2,12 +2,12 @@
 - [Github](https://github.com/alexfernandez/loadtest)
 - [npmjs](https://www.npmjs.com/package/loadtest)
 
-### Install loadtest
+### Install
 ```
 yarn add --dev loadtest
 ```
 
-### Create test
+### Create
 ```
 // vi test/load/load-sample.js
 
@@ -30,13 +30,13 @@ loadtest.loadTest(opts, (error, result) => {
 });
 ```
 
-### Run a test
+### Run
 ```
 node test/load/load-sample.js
 ```
 
 ### Next
-Add test cases of several situation:
+- Create more test for other situation.
 ```
 // Average
 - Test time = long
@@ -51,4 +51,4 @@ Add test cases of several situation:
 - RPS = high
 ```
 
-Use CloudWatch
+- Watch the resource of that server with CloudWatch.
