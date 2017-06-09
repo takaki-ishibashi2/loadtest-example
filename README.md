@@ -2,12 +2,12 @@
 - [Github](https://github.com/alexfernandez/loadtest)
 - [npmjs](https://www.npmjs.com/package/loadtest)
 
-### Installation
+### Install loadtest
 ```
 yarn add --dev loadtest
 ```
 
-### Create a test file
+### Create test
 ```
 // vi test/load/load-sample.js
 
