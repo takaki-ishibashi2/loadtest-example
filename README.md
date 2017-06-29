@@ -1,4 +1,4 @@
-# Reference:
+# Reference
 - [Github](https://github.com/alexfernandez/loadtest)
 - [npm](https://www.npmjs.com/package/loadtest)
 
