@@ -1,15 +1,16 @@
-### Documentation
+# Reference:
 - [Github](https://github.com/alexfernandez/loadtest)
-- [npmjs](https://www.npmjs.com/package/loadtest)
+- [npm](https://www.npmjs.com/package/loadtest)
 
-### Install
+# Usage
+Installation:
 ```
 yarn add --dev loadtest
 ```
 
-### Create
+Edit template:
 ```
-// vi test/load/load-sample.js
+// vim test/load/load-template.js
 
 "use strict";
 const loadtest = require("loadtest");
@@ -20,35 +21,33 @@ const opts = {
     maxRequests: 10,
     requestPerSecond: 2,
     timeout: 3000,
-    url: '<url>' // e.g. http://localhost:3000
+    url: '<add here..>'
 };
 
 loadtest.loadTest(opts, (error, result) => {
-    if (error)
-        return console.error('Got an error: %s', error);
+    if (error) return console.error('Got an error: %s', error);
     console.log('Tests run sucessfull:', result);
 });
 ```
 
-### Run
+Execute:
 ```
-node test/load/load-sample.js
-```
-
-### Next
-- Create more test for other situation.
-```
-// Average
-- Test time = long
-- Requests per second = low
-
-// Release
-- TT = long
-- RPS = low -> high
-
-// Peak
-- TT = short
-- RPS = high
+node test/load/load-template.js
 ```
 
-- Watch the resource of that server with CloudWatch.
+
+# Next
+Validation more case:
+```
+// Normal operation
+- Testing time = long
+- Req / sec = low
+
+// Released
+- Testing time = long
+- Req / sec = FROM low TO high
+
+// Peak time
+- Testing time = short
+- Req / sec = high
+```
