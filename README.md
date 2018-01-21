@@ -1,11 +1,11 @@
-# Reference
+# Official sources
 - [Github](https://github.com/alexfernandez/loadtest)
 - [npm](https://www.npmjs.com/package/loadtest)
 
 # Usage
 Installation:
 ```
-yarn add --dev loadtest
+yarn add package.json
 ```
 
 Edit template:
@@ -21,22 +21,18 @@ const opts = {
     maxRequests: 10,
     requestPerSecond: 2,
     timeout: 3000,
-    url: '<add here..>'
+    url: '' <= add testing url
 };
-
-loadtest.loadTest(opts, (error, result) => {
-    if (error) return console.error('Got an error: %s', error);
-    console.log('Tests run sucessfull:', result);
-});
+:
 ```
 
-Execute:
+Run testing:
 ```
 node test/load/load-template.js
 ```
 
 
-# Next
+# Next step
 Validation more case:
 ```
 // Normal operation
